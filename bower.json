@@ -1,0 +1,22 @@
+{
+  "name": "andela-notes",
+  "version": "0.0.0",
+  "homepage": "https://github.com/andela-calim/andela-notes",
+  "authors": [
+    "Chiemeka Alim <chiemeka.alim@andela.co>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "lumx": "~0.3.35"
+  }
+}
