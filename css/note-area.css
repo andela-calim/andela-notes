@@ -1,0 +1,28 @@
+
+#main-app .notes-area {
+  position: relative;
+  background-color: #FFF;
+  padding: 0;
+  height: 100%;
+}
+.editor {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  top: 0;
+  overflow-y: hidden;
+}
+.editor textarea {
+  height: 100%;
+  width: 100%;
+  resize: none;
+  background-color: transparent;
+  border: none;
+  padding: 50px 70px;
+  font-size: 1.4em;
+  font-weight: 100;
+}
+.editor textarea:focus {
+  outline: none;
+}
