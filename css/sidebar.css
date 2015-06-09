@@ -1,21 +1,23 @@
 #main-app .sidebar {
   position: relative;
-  background-color: #aaa;
-  height: 100%;
+  background-color: #ebebeb;
+  min-height: 600px;
   padding: 0;
 }
 
+.notes-list .list {
+  margin: 0px !important;
+}
 
 .notes-list ul li {
-  background-color: #999;
-  padding: 35px 30px;
+  background-color: #ebebeb;
   cursor: pointer;
-  transition: background-color .3s;
+  transition: background-color .2s;
 }
 
 .notes-list ul li:hover {
-  background-color: #888;
-  transition: background-color .3s;
+  background-color: #40D2C3;
+  transition: background-color .2s;
 }
 
 .notes-list ul li.active {
@@ -41,12 +43,12 @@
   color: #fff;
   font-weight: 700;
   text-align: center;
-  background-color: #006699;
+  background-color: #FF2F66;
   transition: background-color .3s;
   cursor: pointer;
 }
 
 .add-new-note:hover {
-  background-color: #005588;
+  background-color: #40D2C3;
   transition: background-color .3s;
 }
