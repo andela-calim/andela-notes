@@ -1,6 +1,7 @@
 'use strict';
+// $.material.init();
 
-var app = angular.module('andeNote', ['lumx'])
+var app = angular.module('andeNote', [])
 
 .directive('header', function() {
     return {
