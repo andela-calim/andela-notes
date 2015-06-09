@@ -1,27 +1,28 @@
 <div class="sidebar col-xs-3">
   <div class="notes-list">
     <ul class="list mt++">
-      <li class="list-row list-row--multi-line">
+      <li class="list-row list-row--multi-line" ng-click="showNote()" ng-class="{'active': activeNote }">
         <div class="list-row__content">
           <span class="display-block fs-body-1 tc-black-2">5 minutes ago.</span>
-          <span class="fs-title display-block mb">Two-line item</span>
+          <span class="fs-title display-block mb">Good design qualities</span>
           <span class="display-block fs-body-1 tc-black-2">Secondary text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam massa quam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span>
         </div>
 
-        <div class="list-row__secondary">
-          <i class="icon icon--xs icon--grey icon--flat mdi mdi-information"></i>
+        <div class="list-row__secondary" ng-show="syncNote">
+          <i ng-if="syncing" class="icon icon--s icon--green icon--flat mdi mdi-sync"></i>
+          <i ng-if="!syncing" class="icon icon--s icon--amber icon--flat mdi mdi-sync-alert"></i>
         </div>
       </li>
       <div class="divider divider--dark"></div>
       <li class="list-row list-row--multi-line">
         <div class="list-row__content">
           <span class="display-block fs-body-1 tc-black-2">5 minutes ago.</span>
-          <span class="fs-title display-block mb">Two-line item</span>
+          <span class="fs-title display-block mb">Demo Title</span>
           <span class="display-block fs-body-1 tc-black-2">Secondary text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam massa quam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span>
         </div>
 
         <div class="list-row__secondary">
-          <i class="fa fa-plus fa-2x"></i>
+          <i class="icon icon--xs icon--grey icon--flat mdi mdi-information"></i>
         </div>
       </li>
       <div class="divider divider--dark"></div>

@@ -18,20 +18,17 @@
 .notes-list ul li:hover {
   background-color: #40D2C3;
   transition: background-color .2s;
+  color: #fbfbfb;
 }
 
-.notes-list ul li.active {
-  background-color: #fff;
-}
-
-.notes-list ul li h2 {
+/*.notes-list ul li h2 {
   font-size: 1.3em;
   margin: 0;
 }
 .notes-list ul li p {
   margin: 5px 0 0;
   font-size: 0.9em;
-}
+}*/
 
 .add-new-note {
   position: absolute;
@@ -40,7 +37,6 @@
   bottom: 0;
   height: 50px;
   line-height: 50px;
-  color: #fff;
   font-weight: 700;
   text-align: center;
   background-color: #FF2F66;
@@ -50,5 +46,11 @@
 
 .add-new-note:hover {
   background-color: #40D2C3;
+  color: #fbfbfb;
   transition: background-color .3s;
+}
+
+.active {
+  background-color: #fff !important;
+  color: #212121 !important;
 }
