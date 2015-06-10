@@ -1,6 +1,7 @@
 'use strict';
+// $.material.init();
 
-var app = angular.module('andeNote', ['lumx'])
+var app = angular.module('andeNote', [])
 
 .directive('header', function() {
     return {
@@ -13,58 +14,7 @@ var app = angular.module('andeNote', ['lumx'])
     return {
       restrict: 'E',
       templateUrl: 'templates/sidebar.html',
-      replace: true,
-      controller: ['$scope', function($scope) {
-        // $scope.selected = false;
-
-        $scope.allNotes = [
-          {
-            title: "Good design qualities",
-            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-            isSelected: false
-          },
-          {
-            title: "Demo Title",
-            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-            isSelected: false
-          },
-          {
-            title: "Untitled",
-            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-            isSelected: false
-          },
-          {
-            title: "Good design qualities",
-            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-            isSelected: false
-          },
-          {
-            title: "Demo Title",
-            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-            isSelected: false
-          },
-          {
-            title: "Untitled",
-            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-            isSelected: false
-          }
-        ];
-
-        $scope.currentIndex = null; 
-
-        $scope.selectNote = function($index) {
-          if($scope.currentIndex !== null) {
-            $scope.allNotes[$scope.currentIndex].isSelected = false;
-            // $scope.allNotes[$index].deleteBtn = false;
-          }
-          $scope.allNotes[$index].isSelected = true;
-          $scope.allNotes[$index].deleteBtn = false;
-          $scope.currentIndex = $index;
-
-          //If syncing is NOT in progress set syncing to false
-          // var syncing = true;       
-        };
-      }]
+      replace: true
     };
   })
   .directive('noteArea', function() {
