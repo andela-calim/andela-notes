@@ -2,6 +2,7 @@
   background-color: #EBEBEB;
   height: 60px;
   border-bottom: 2px solid #d9d9d9;
+  font-size: 70%;
 }
 
 #header .search-bar, #header .tool-bar {
@@ -23,6 +24,46 @@
   color: #d71a5c;
 }
 
+.nav > .dropdown > .dropdown-toggle {
+  line-height: 60px;
+  font-size: 2em;
+  display: inline;
+  padding-left: 4.5em;
+}
+
+.search-field {
+  background: url("../imgs/search.png");
+  background-repeat: no-repeat;
+  background-position: 15% 50%;
+  background-size: 30px;
+}
+
+fieldset[disabled] .form-control:not(textarea), .form-control-wrapper .form-control:not(textarea), .form-control:not(textarea), fieldset[disabled] .form-control:focus:not(textarea), .form-control-wrapper .form-control:focus:not(textarea), .form-control:focus:not(textarea), fieldset[disabled] .form-control.focus:not(textarea), .form-control-wrapper .form-control.focus:not(textarea), .form-control.focus:not(textarea) {
+  height: 50px;
+}
+
+.navbar-form .form-control {
+  width: 30em;
+  margin-left: 4.4em;
+  padding-left: 3em;
+  font-size: 2em;
+}
+
+.user-menu h3 {
+  /*display: inline;*/
+}
+
+.user-menu {
+  border-radius: 50%;
+  background: url("../imgs/chi.jpg");
+  background-repeat: no-repeat;
+  background-position: 60%;
+  background-size: 50px;
+  /*background-color: #000;*/
+  /*display: inline;*/
+  /*height: 50px;*/
+}
+
 /*.formatting-tools li {
   display: inline-block;
   font-size: 1.2em;
@@ -37,9 +78,30 @@
   width: 50px;
 }
 */
+@media (max-width: 1280px) {
+  #header .search-bar h1 {
+    font-size: 2.0em;
+    padding-left: 50%;
+  }
+
+  .search-field {
+    /*background: url("../imgs/search.png");*/
+    /*background-repeat: no-repeat;*/
+    background-position: 10% 50%;
+    /*background-size: 30px;*/
+  }
+
+  .navbar-form .form-control {
+    width: 20em;
+    margin-left: 1.4em;
+    padding-left: 2em;
+    font-size: 2em;
+  }
+}
+
 @media (max-width: 1024px) {
   #header .search-bar #logo {
-    background-position: 10% 0;
+    background-position: 15% 0;
   }
 
   #header .search-bar h1 {
