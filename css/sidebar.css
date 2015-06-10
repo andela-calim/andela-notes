@@ -23,6 +23,10 @@
   background-color: #40D2C3;
   transition: all .3s;
 }
+.delete {
+  padding: 27px 0px;
+  display: none;
+}
 
 .add-new-note {
   width: 318px;
