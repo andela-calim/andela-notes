@@ -1,6 +1,14 @@
 <div class="notes-area col-xs-10" ng-init="selectNote()">
   <div class="editor">
-    <input type="text" class="title" value="{{selectedNote.title}}"></textarea>
+    <div class="toolbox">
+      <div>B</div>
+      <div>I</div>
+      <div>U</div>
+      <div>S</div>
+      <div>E</div>
+      <div>V</div>
+    </div>
+    <input type="text" class="title" value="{{selectedNote.title}}">
     <textarea>{{selectedNote.text}}</textarea>
   </div>
 </div>
