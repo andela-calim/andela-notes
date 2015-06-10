@@ -1,28 +1,69 @@
-
 #main-app .notes-area {
   position: relative;
   background-color: #FFF;
   padding: 0;
   height: 100%;
 }
+
 .editor {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 50px;
+  bottom: 0;
   top: 0;
+  padding-right: 100px;
   overflow-y: hidden;
+  margin: 50px 0 0 10%;
+  max-width: 720px;
+  overflow: scroll;
 }
+
 .editor textarea {
   height: 100%;
   width: 100%;
   resize: none;
   background-color: transparent;
   border: none;
-  padding: 50px 70px;
+  line-height: 1.6 !important;
+  font-size: 1em !important;
   font-size: 1.4em;
   font-weight: 100;
+  display: block;
 }
+
+.editor .toolbox {
+position: fixed;
+  width: 40px;
+  background-color: red;
+  margin-left: 50%;
+  margin-top: 10%;
+}
+
+.toolbox div {
+  height: 40px;
+  background-color: red;
+  border-bottom: 1px solid;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+
 .editor textarea:focus {
   outline: none;
+}
+
+input.title {
+  font-family: 'Vollkorn', serif;
+  font-size: 1.6em;
+  outline: none;
+  margin-bottom: 40px;
+  border: none;
+  color: #50d2c2;
+}
+
+@media (min-width: 1500px) {
+  .editor {
+    margin: 50px 8% 0;
+  }
 }
