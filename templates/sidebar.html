@@ -4,13 +4,13 @@
       <li class="list-row list-row--multi-line list-row--has-separator" 
       ng-repeat="note in allNotes track by $index" 
       ng-class="{'active': note.isSelected }" ng-click="selectNote($index)">
-        <div class="list-row__content" ng-mouseover="hoverIn($event)">
+        <div class="list-row__content" ng-mouseover="hoverIn(note)" ng-mouseleave="hoverOut(note)">
           <span class="display-block fs-body-1 tc-black-2">5 minutes ago.</span>
           <span class="display-block fs-title mb">{{ note.title }}</span>
           <span class="display-block fs-body-1">{{ note.excerpt }}</span>
         </div>
 
-        <span class="delete" style="padding: 27px 0px;">
+        <span class="list-row__secondary" style="padding: 27px 0px;" ng-show="note.hovered">
           <i class="icon icon--xs icon--black icon--flat mdi mdi-delete"></i>
         </span>
 
