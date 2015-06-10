@@ -1,14 +1,16 @@
 <div class="notes-area col-xs-9" ng-init="selectNote(0)">
   <div class="editor">
     <div class="toolbox">
-      <div>B</div>
-      <div>I</div>
-      <div>U</div>
-      <div>S</div>
-      <div>E</div>
-      <div>V</div>
+      <div>
+        <ul>
+          <li ng-repeat="tool in toolbox" class="wrapper">
+            <i class="mdi mdi-{{tool.icon}}"></i>
+            <div class="tooltip">{{tool.tip}}</div>
+          </li>
+        </ul>
+      </div>
     </div>
-    <input type="text" class="title" value="{{editNote.title}}">
+    <input type="text" class="title" value="{{editNote.title}}" placeholder="Untitled">
     <textarea>{{editNote.text}}</textarea>
   </div>
 </div>
