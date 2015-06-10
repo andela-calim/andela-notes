@@ -13,33 +13,30 @@
 
 .notes-list ul li {
   cursor: pointer;
-  background-color: #fafafa;
-  transition: background-color .3s;
-  color: rgba(0,0,0,.54);
   border-left: 5px solid transparent;
-  transition: all .7s;
+  background-color: #fafafa;
+  transition: all .3s;
 }
 
 .notes-list ul li:hover {
   color: #fbfbfb;
   background-color: #40D2C3;
-  transition: all .7s;
-
+  transition: all .3s;
 }
 
 .add-new-note {
-  /*width: 343px;*/
+  width: 318px;
   position: fixed;
-  left: 262px;
+  left: 0;
   bottom: 0;
   text-align: center;
-  color: #fbfbfb;
-  /*background-color: #FF2F66;*/
+  background-color: #FF2F66;
   transition: background-color .3s;
   cursor: pointer;
 }
 
 .add-new-note:hover {
+  color: #fbfbfb;
   background-color: #40D2C3;
   transition: background-color .3s;
 }
@@ -50,3 +47,4 @@
   border-left: 5px solid #FF2F66 !important;
   width: 322px;
 }
+
