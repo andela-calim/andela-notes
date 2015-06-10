@@ -32,9 +32,32 @@ var app = angular.module('andeNote', ['lumx'])
             title: "Untitled",
             body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
             isSelected: false
+          },
+          {
+            title: "Good design qualities",
+            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+            isSelected: false
+          },
+          {
+            title: "Demo Title",
+            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+            isSelected: false
+          },
+          {
+            title: "Untitled",
+            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+            isSelected: false
           }
         ];
 
+        $scope.hoverIn = function(){
+          $scope.deleteBtn = true;
+        };
+
+        $scope.hoverOut = function(){
+          $scope.deleteBtn = false;
+        }; 
+        
         $scope.currentIndex = null;
 
         $scope.selectNote = function($index) {
@@ -45,7 +68,7 @@ var app = angular.module('andeNote', ['lumx'])
           $scope.currentIndex = $index;
 
           //If syncing is NOT in progress set syncing to false
-          // var syncing = true;        
+          // var syncing = true;       
         };
       }]
     };

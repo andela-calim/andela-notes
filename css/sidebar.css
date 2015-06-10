@@ -1,7 +1,7 @@
 #main-app .sidebar {
   position: relative;
-  background-color: #ebebeb;
-  min-height: 600px;
+  background-color: #fafafa;
+  min-height: 625px;
   padding: 0;
 }
 
@@ -10,25 +10,16 @@
 }
 
 .notes-list ul li {
-  background-color: #ebebeb;
   cursor: pointer;
+  background-color: #fafafa;
   transition: background-color .3s;
 }
 
 .notes-list ul li:hover {
+  color: #fbfbfb;
   background-color: #40D2C3;
   transition: background-color .3s;
-  color: #fbfbfb;
 }
-
-/*.notes-list ul li h2 {
-  font-size: 1.3em;
-  margin: 0;
-}
-.notes-list ul li p {
-  margin: 5px 0 0;
-  font-size: 0.9em;
-}*/
 
 .add-new-note {
   position: absolute;
@@ -39,9 +30,9 @@
   line-height: 50px;
   font-weight: 700;
   text-align: center;
+  color: #fbfbfb;
   background-color: #FF2F66;
   transition: background-color .3s;
-  color: #fbfbfb;
   cursor: pointer;
 }
 
