@@ -51,13 +51,13 @@ var app = angular.module('andeNote', ['lumx'])
         ];
 
         $scope.hoverIn = function(){
-          $scope.deleteBtn = true;
+          var deleteBtn = true;
         };
 
         $scope.hoverOut = function(){
-          $scope.deleteBtn = false;
+          var deleteBtn = false;
         }; 
-        
+
         $scope.currentIndex = null;
 
         $scope.selectNote = function($index) {
