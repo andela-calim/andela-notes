@@ -51,8 +51,33 @@ app.controller('NoteCtrl', ['$scope', function($scope) {
     $scope.currentIndex = $index;
   };
 
-  
-
-
+  $scope.toolbox = [{
+    icon: 'format-bold',
+    tip: 'Bold'
+  }, {
+    icon: 'format-italic',
+    tip: 'Italicize'
+  }, {
+    icon: 'format-underline',
+    tip: 'Underline text'
+  }, {
+    icon: 'format-indent-increase',
+    tip: 'Indent text'
+  }, {
+    icon: 'format-indent-decrease',
+    tip: 'Indent text'
+  }, {
+    icon: 'format-align-left',
+    tip: 'Align Left'
+  }, {
+    icon: 'format-align-center',
+    tip: 'Align Center'
+  }, {
+    icon: 'format-align-right',
+    tip: 'Align Right'
+  }, {
+    icon: 'share-variant',
+    tip: 'Share'
+  }];
 
 }]);
