@@ -50,21 +50,15 @@ var app = angular.module('andeNote', ['lumx'])
           }
         ];
 
-        $scope.hoverIn = function(){
-          var deleteBtn = true;
-        };
-
-        $scope.hoverOut = function(){
-          var deleteBtn = false;
-        }; 
-
-        $scope.currentIndex = null;
+        $scope.currentIndex = null; 
 
         $scope.selectNote = function($index) {
           if($scope.currentIndex !== null) {
             $scope.allNotes[$scope.currentIndex].isSelected = false;
+            // $scope.allNotes[$index].deleteBtn = false;
           }
           $scope.allNotes[$index].isSelected = true;
+          $scope.allNotes[$index].deleteBtn = false;
           $scope.currentIndex = $index;
 
           //If syncing is NOT in progress set syncing to false
