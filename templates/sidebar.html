@@ -1,17 +1,27 @@
-<div class="sidebar col-xs-2">
+<div class="sidebar col-xs-3">
   <div class="notes-list">
-    <ul>
-      <li class="active">
-        <h2>Note 1</h2>
-        <p>Last edited</p>
-      </li>
-      <li>
-        <h2>Note 2</h2>
-        <p>Last edited</p>
+    <ul class="list mt++">
+      <li class="list-row list-row--multi-line list-row--has-separator"
+      ng-repeat="note in allNotes track by $index"
+      ng-class="{'active': note.isSelected }" ng-click="selectNote($index)">
+        <div class="list-row__content" ng-mouseover="hoverIn($event)" ng-mouseleave="hoverOut($event)">
+          <span class="display-block fs-body-1 tc-black-2">5 minutes ago.</span>
+          <span class="fs-title display-block mb">{{ note.title }}</span>
+          <span class="display-block fs-body-1">{{ note.body }}</span>
+        </div>
+
+        <div class="list-row__secondary" ng-show="note.isSelected">
+          <!-- <i class="icon icon--s icon--green icon--flat mdi mdi-sync"></i> -->
+          <i class="icon icon--s icon--amber icon--flat mdi mdi-sync-alert"></i>
+        </div>
+        <div class="list-row__secondary" ng-show="deleteBtn">
+          <i class="icon icon--xs icon--black icon--flat mdi mdi-close-circle-outline"></i>
+        </div>
       </li>
     </ul>
   </div>
+
   <div class="add-new-note">
-    <i class="glyphicon glyphicon-plus"></i> &nbsp; Add New Note
+    <i class="icon icon--xl icon--white icon--flat mdi mdi-plus"></i>
   </div>
 </div>
