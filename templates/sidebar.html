@@ -1,24 +1,16 @@
 <div class="sidebar col-xs-3">
   <div class="notes-list">
     <ul class="list mt++">
-      <li class="list-row list-row--multi-line list-row--has-separator" 
-      ng-repeat="note in allNotes track by $index" 
+      <li class="list-row list-row--multi-line" ng-repeat="note in allNotes track by $index" 
       ng-class="{'active': note.isSelected }" ng-click="selectNote($index)">
         <div class="list-row__content" ng-mouseover="hoverIn(note)" ng-mouseleave="hoverOut(note)">
-          <span class="display-block fs-body-1 tc-black-2">5 minutes ago.</span>
+          <span class="display-block fs-body-1 tc-black-2">5 minutes ago. 
+            <span ng-show="note.isSelected" class="right"><i class="icon icon--s icon--green icon--flat mdi mdi-sync"></i></span>
+            <span ng-show="note.hovered" class="right"><i class="icon icon--xs icon--white icon--flat mdi mdi-delete"></i></span>
+          </span>
           <span class="display-block fs-title mb">{{ note.title }}</span>
           <span class="display-block fs-body-1">{{ note.excerpt }}</span>
-        </div>
-
-        <span class="list-row__secondary" style="padding: 27px 0px;" ng-show="note.hovered">
-          <i class="icon icon--xs icon--black icon--flat mdi mdi-delete"></i>
-        </span>
-
-        <div class="list-row__secondary" ng-show="note.isSelected">
-          <i class="icon icon--s icon--green icon--flat mdi mdi-sync"></i>
-          <!-- <i class="icon icon--s icon--amber icon--flat mdi mdi-sync-alert"></i> -->
-        </div>
-        
+        </div>        
       </li>
     </ul>
   </div>
