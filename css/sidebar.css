@@ -1,7 +1,9 @@
 #main-app .sidebar {
   position: relative;
-  background-color: #fafafa;
+  background-color: #f4f4f4;
   padding: 0;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .notes-list .list {
@@ -10,35 +12,63 @@
 
 .notes-list ul li {
   cursor: pointer;
-  background-color: #fafafa;
-  transition: background-color .3s;
-  color: rgba(0,0,0,.54);
+  border-bottom: 1px solid #ebebeb;
+  border-left: 5px solid transparent;
+  border-right: 2px solid #ebebeb;
+  -webkit-transition: background-color .4s !important;
+  background-color: #f4f4f4;
+}
+
+.notes-list ul li .list-row__content {
+  position: relative;
+  z-index: 20;
+}
+
+.notes-list ul li .deleteBtn {
+  position: relative;
+  z-index: 30;
 }
 
 .notes-list ul li:hover {
-  color: #fbfbfb !important;
+  color: #fbfbfb;
+  -webkit-transition: background-color .4s !important;
   background-color: #40D2C3;
-  transition: background-color .3s;
+}
+
+.right {
+  float: right;
+  z-index: 90;
+  margin-top: 5px;
+}
+
+.deleteBtn {
+  margin-top: 11px;
 }
 
 .add-new-note {
-  width: 320px;
+  width: inherit;
+  height: 56px;
   position: fixed;
-  left: 0;
+  left: -2px;
   bottom: 0;
   text-align: center;
-  color: #fbfbfb;
   background-color: #FF2F66;
   transition: background-color .3s;
   cursor: pointer;
+  z-index: 777;
 }
 
 .add-new-note:hover {
+  color: #fbfbfb;
   background-color: #40D2C3;
   transition: background-color .3s;
 }
 
 .active {
   background-color: #fff !important;
-  color: #212121 !important;
+  color: #333 !important;
+  border-left: 5px solid #FF2F66 !important;
+  border: none;
+  border-right: 2px solid #ffffff !important;
 }
+
