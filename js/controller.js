@@ -59,9 +59,19 @@ app.controller('NoteCtrl', ['$scope', function($scope) {
     }
     $scope.allNotes[$index].isSelected = true;
     $scope.editNote = $scope.allNotes[$index];
-    $scope.allNotes[$index].hovered = false;
+    // $scope.allNotes[$index].hovered = false;
     $scope.currentIndex = $index;
   };
+
+  $scope.deleteNote = function(note, $index) {
+    var confirm = confirm("Are you sure you want to delete this note");
+    if(confirm){
+      if ($scope.allNotes.indexOf(list) === 0) {
+        $scope.allNotes.shift();
+      }
+      $scope.allNotes.splice($scope.allNotes.indexOf(list), $index);
+    }
+  }
 
   $scope.toolbox = [{
     icon: 'format-bold',
