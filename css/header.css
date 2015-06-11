@@ -28,13 +28,13 @@
   line-height: 60px;
   font-size: 2em;
   display: inline;
-  padding-left: 4.5em;
+  padding-left: 3em;
 }
 
 .search-field {
   background: url("../imgs/search.png");
   background-repeat: no-repeat;
-  background-position: 15% 50%;
+  background-position: 3% 50%;
   background-size: 30px;
 }
 
@@ -43,25 +43,28 @@ fieldset[disabled] .form-control:not(textarea), .form-control-wrapper .form-cont
 }
 
 .navbar-form .form-control {
-  width: 30em;
-  margin-left: 4.4em;
-  padding-left: 3em;
+  /*width: 20em;*/
+  margin-left: 0em;
+  padding-left: 2em;
   font-size: 2em;
 }
 
-.user-menu h3 {
-  /*display: inline;*/
+div.user-menu h4 {
+  line-height: 60px;
+  position: absolute;
+  right: 120px;
 }
 
-.user-menu {
+div.user-menu {
+  width: 60px !important;
+  background: url("../imgs/chi.jpg") no-repeat center;
+  background-size: contain;
   border-radius: 50%;
-  background: url("../imgs/chi.jpg");
-  background-repeat: no-repeat;
-  background-position: 60%;
-  background-size: 50px;
-  /*background-color: #000;*/
-  /*display: inline;*/
-  /*height: 50px;*/
+  padding: 0 70px;
+  /*background-position: 0 0 10px 0;*/
+  /*padding-right: 100px;*/
+  /*width: 40px;*/
+  height: 60px;
 }
 
 /*.formatting-tools li {
@@ -87,13 +90,13 @@ fieldset[disabled] .form-control:not(textarea), .form-control-wrapper .form-cont
   .search-field {
     /*background: url("../imgs/search.png");*/
     /*background-repeat: no-repeat;*/
-    background-position: 10% 50%;
+    background-position: 3% 50%;
     /*background-size: 30px;*/
   }
 
   .navbar-form .form-control {
-    width: 20em;
-    margin-left: 1.4em;
+    /*width: 20em;*/
+    margin-left: 0;
     padding-left: 2em;
     font-size: 2em;
   }
@@ -120,7 +123,7 @@ fieldset[disabled] .form-control:not(textarea), .form-control-wrapper .form-cont
   }
 }
 
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
   #header .search-bar #logo {
     background-position: 50% 0;
   }
@@ -141,4 +144,4 @@ fieldset[disabled] .form-control:not(textarea), .form-control-wrapper .form-cont
   #header .search-bar #logo {
     background-size: 40px;
   }
-}
+}*/
