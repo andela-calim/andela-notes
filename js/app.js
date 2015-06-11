@@ -49,4 +49,17 @@ var app = angular.module('andeNote', [])
       templateUrl: 'templates/note-area.html',
       replace: true
     };
+  })
+  .directive('changeBg', function() {
+    return {
+      restrict: 'A',
+      link: function(scope, elm) {
+        var elem = $(elm[0]);
+        scope.$watch('changeBg', function(newVal) {
+          if (newVal) {
+            elem.addClass('bg');
+          }
+        });
+      }
+    };
   });
