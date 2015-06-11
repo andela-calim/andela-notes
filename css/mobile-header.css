@@ -1,0 +1,30 @@
+.bg {
+  background-color: #fff !important;
+}
+
+.card {
+  background-color: #EBEBEB;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+span.logo-text {
+  background: url("../imgs/crow.png") no-repeat;
+  background-size: contain;
+  padding-left: 50px;
+  color: #ff3366;
+  font-weight: 500;
+  font-family: 'Vollkorn', serif;
+}
+
+i.mdi-menu {
+  color: #ff3366 !important;
+}
+
+div.avatar {
+  background: url("../imgs/chi.jpg") no-repeat;
+  background-size: cover;
+  border-radius: 40px;
+  padding-left: 50px;
+}
