@@ -1,16 +1,21 @@
-<div class="notes-area col-xs-9" ng-init="selectNote(0)">
-  <div class="editor">
-    <div class="toolbox">
-      <div>
-        <ul>
-          <li ng-repeat="tool in toolbox" class="wrapper">
-            <i class="mdi mdi-{{tool.icon}}"></i>
-            <div class="tooltip">{{tool.tip}}</div>
-          </li>
-        </ul>
+<div class="notes-area col-lg-9" ng-init="selectNote(0)">
+  <div class="bgtrans" change-bg>
+    <div class="me">
+      <div class="editor">
+        <a href="" class="addBgColor" ng-click="addBgColor()"><i class="mdi mdi-camera"></i></a>
+        <div class="toolbox">
+          <div>
+            <ul>
+              <li ng-repeat="tool in toolbox" class="wrapper">
+                <i class="mdi mdi-{{tool.icon}}"></i>
+                <div class="tooltip">{{tool.tip}}</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <input type="text" class="title" value="{{editNote.title}}" placeholder="Untitled">
+        <textarea placeholder="Type your note here...">{{editNote.text}}</textarea>
       </div>
     </div>
-    <input type="text" class="title" value="{{editNote.title}}" placeholder="Untitled">
-    <textarea>{{editNote.text}}</textarea>
   </div>
 </div>
