@@ -5,10 +5,10 @@ body {
   line-height: 1.5;
 }
 
-* {
+/** {
   -webkit-transition: all 1s;
   font-size: 100%;
-}
+}*/
 
 h1,
 h2,

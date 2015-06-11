@@ -20,6 +20,18 @@ app.controller('NoteCtrl', ['$scope', function($scope) {
     title: 'My day in Review',
     isSelected: false
   }, {
+    text: 'Greatly cottage thought fortune no mention he. eed eyes son not shot. Jennings removing are his eat dashwood. Middleton as pretended listening he smallness perceived. \n \nNow his but two green spoil drift. Sudden she seeing garret far regard. By hardly it direct if pretty up regret.ression collecting delightful unpleasant by prosperous as on. End too talent she object mrs wanted remove giving. \n \nFor who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving. \n \nSee resolved goodness felicity shy civility domestic had but.',
+    title: 'My day in Review',
+    isSelected: false
+  }, {
+    text: 'Greatly cottage thought fortune no mention he. eed eyes son not shot. Jennings removing are his eat dashwood. Middleton as pretended listening he smallness perceived. \n \nNow his but two green spoil drift. Sudden she seeing garret far regard. By hardly it direct if pretty up regret.ression collecting delightful unpleasant by prosperous as on. End too talent she object mrs wanted remove giving. \n \nFor who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving. \n \nSee resolved goodness felicity shy civility domestic had but.',
+    title: 'My day in Review',
+    isSelected: false
+  }, {
+    text: 'Greatly cottage thought fortune no mention he. eed eyes son not shot. Jennings removing are his eat dashwood. Middleton as pretended listening he smallness perceived. \n \nNow his but two green spoil drift. Sudden she seeing garret far regard. By hardly it direct if pretty up regret.ression collecting delightful unpleasant by prosperous as on. End too talent she object mrs wanted remove giving. \n \nFor who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving. \n \nSee resolved goodness felicity shy civility domestic had but.',
+    title: 'My day in Review',
+    isSelected: false
+  }, {
     text: 'His eat dashwood. \n \nMiddleton as pretended listening he smallness perceived. Now his but two green spoil drift. Sudden she seeing garret far regard. \n \nBy hardly it direct if pretty up regret. Ability thought enquire settled prudent you sir. Or easy knew sold on well come year. \n \nSomething consulted age extremely end procuring. Collecting preference he inquietude projection me in by. So do of sufficient projere.',
     title: 'Testimony',
     isSelected: false

@@ -6,7 +6,7 @@
         <div class="list-row__content" ng-mouseover="hoverIn(note)" ng-mouseleave="hoverOut(note)">
           <span class="display-block fs-body-1 tc-black-2">5 minutes ago. 
             <span ng-show="note.isSelected" class="right"><i class="icon icon--s icon--green icon--flat mdi mdi-sync"></i></span>
-            <span ng-show="note.hovered" class="right"><i class="icon icon--xs icon--white icon--flat mdi mdi-delete"></i></span>
+            <span ng-show="note.hovered" class="right"><img src="imgs/delete.png" style="color:white;"></span>
           </span>
           <span class="display-block fs-title mb">{{ note.title }}</span>
           <span class="display-block fs-body-1">{{ note.excerpt }}</span>
