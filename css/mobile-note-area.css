@@ -1,0 +1,22 @@
+.m-note-area {
+  margin-top: 100px;
+}
+
+.m-contain {
+  margin-left: 48px;
+  margin-right: 48px;
+}
+
+.f-tools {
+  float: left;
+  margin-right: 25px;
+  padding-top: 10px;
+}
+
+@media (max-width: 599px) {
+  .f-tools {
+    float: left;
+    margin-right: 16px;
+    padding-top: 10px;
+  }
+}

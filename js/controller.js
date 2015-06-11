@@ -12,7 +12,7 @@ app.controller('NoteCtrl', ['$scope', function($scope) {
     title: 'New Year Resolution',
     isSelected: false
   }, {
-    text: ' Too want but tall nay like old. Removing yourself be in answered he. Consider occasion get improved him she eat. Letter by lively oh denote an. \n \nShe wholly fat who window extent either formal. Removing welcomed civility or hastened is. Justice elderly but perhaps expense six her are another passage. Full her ten open fond walk not down. For request general express unknown are. \n \nHe in just mr door body held john down he. So journey greatly or garrets. Draw door kept do so come on open mean. Estimating stimulated how reasonably precaution diminution she simplicity sir but. Questions am sincerity zealously concluded consisted or no gentleman it. \n \nWe diminution preference thoroughly if. Joy deal pain view much her time. Led young gay would now state. Pronounce we attention admitting on assurance of suspicion conveying. That his west quit had met till. Of advantage he attending household at do perceived. Middleton in objection discovery as agreeable. Edward thrown dining so he my around to. \n \nNow principles discovered off increasing how reasonably middletons men. Add seems out man met plate court sense. His joy she worth truth given. All year feet led view went sake. You agreeable breakfast his set perceived immediate. Stimulated man are projecting favourable middletons can cultivated. Moments its musical age explain. But extremity sex now education concluded earnestly her continual. O. Separate met packages shy for kindness.',
+    text: 'Too want but tall nay like old. Removing yourself be in answered he. Consider occasion get improved him she eat. Letter by lively oh denote an. \n \nShe wholly fat who window extent either formal. Removing welcomed civility or hastened is. Justice elderly but perhaps expense six her are another passage. Full her ten open fond walk not down. For request general express unknown are. \n \nHe in just mr door body held john down he. So journey greatly or garrets. Draw door kept do so come on open mean. Estimating stimulated how reasonably precaution diminution she simplicity sir but. Questions am sincerity zealously concluded consisted or no gentleman it. \n \nWe diminution preference thoroughly if. Joy deal pain view much her time. Led young gay would now state. Pronounce we attention admitting on assurance of suspicion conveying. That his west quit had met till. Of advantage he attending household at do perceived. Middleton in objection discovery as agreeable. Edward thrown dining so he my around to. \n \nNow principles discovered off increasing how reasonably middletons men. Add seems out man met plate court sense. His joy she worth truth given. All year feet led view went sake. You agreeable breakfast his set perceived immediate. Stimulated man are projecting favourable middletons can cultivated. Moments its musical age explain. But extremity sex now education concluded earnestly her continual. O. Separate met packages shy for kindness.',
     title: 'New Diet Lifestyle',
     isSelected: false
   }, {
@@ -25,6 +25,20 @@ app.controller('NoteCtrl', ['$scope', function($scope) {
     isSelected: false
   }];
 
+  // Add excerpts to notes
+  for(var i = 0; i < $scope.allNotes.length; i++) {
+    var excerpt = $scope.allNotes[i].text.substring(0,50) + '...';
+    $scope.allNotes[i].excerpt = excerpt;
+  }
+
+  $scope.hoverIn = function(note) {
+    note.hovered = true;
+  }
+
+  $scope.hoverOut = function(note) {
+    note.hovered = false;
+  }
+
   $scope.currentIndex = null;
 
   $scope.selectNote = function($index) {
@@ -33,8 +47,44 @@ app.controller('NoteCtrl', ['$scope', function($scope) {
     }
     $scope.allNotes[$index].isSelected = true;
     $scope.editNote = $scope.allNotes[$index];
+    $scope.allNotes[$index].hovered = false;
     $scope.currentIndex = $index;
   };
+
+  $scope.toolbox = [{
+    icon: 'format-bold',
+    tip: 'Bold'
+  }, {
+    icon: 'format-italic',
+    tip: 'Italicize'
+  }, {
+    icon: 'format-underline',
+    tip: 'Underline text'
+  }, {
+    icon: 'format-indent-increase',
+    tip: 'Indent text'
+  }, {
+    icon: 'format-indent-decrease',
+    tip: 'Indent text'
+  }, {
+    icon: 'format-align-left',
+    tip: 'Align Left'
+  }, {
+    icon: 'format-align-center',
+    tip: 'Align Center'
+  }, {
+    icon: 'format-align-right',
+    tip: 'Align Right'
+  }, {
+    icon: 'share-variant',
+    tip: 'Share'
+  }];
+
+
+
+  /********************
+  MOBILE
+  ********************/
 
 
 }]);
