@@ -6,7 +6,7 @@ body {
 }
 
 * {
-  -webkit-transition: all 1s;
+  /*-webkit-transition: all 1s;*/
   font-size: 100%;
 }
 
