@@ -47,6 +47,10 @@ app.controller('NoteCtrl', ['$scope', function($scope) {
     $scope.editNote = $scope.allNotes[$index];
   };
 
+  $scope.addNote = function() {
+
+  };
+
   $scope.toolbox = [{
     icon: 'format-bold',
     tip: 'Bold'
