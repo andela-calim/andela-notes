@@ -11,7 +11,31 @@
   float: left;
   margin-right: 25px;
   padding-top: 10px;
+  margin-bottom: 40px;
 }
+
+.m-editor {
+  margin-top: 150px;
+  clear: both;
+}
+.m-editor textarea {
+  height: 55%;
+  width: 100%;
+  resize: none;
+  background-color: transparent;
+  border: none;
+  line-height: 1.6 !important;
+  font-size: 1em !important;
+  font-size: 1.4em;
+  font-weight: 100;
+  display: block;
+  min-height: 407px;
+}
+
+.m-editor textarea:focus {
+  outline: none;
+}
+
 
 @media (max-width: 599px) {
   .f-tools {

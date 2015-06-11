@@ -3,8 +3,9 @@
     <div ng-repeat="tool in toolbox">
       <button class="as-text f-tools" lx-tooltip="{{tool.tip}}"><i class="mdi mdi-{{tool.icon}}"></i></button>
     </div>
-    <div>
-
-    </div>
+  </div>
+  <div class="m-editor">
+    <input type="text" class="title" value="{{editNote.title}}" placeholder="Untitled">
+    <textarea placeholder="Type your note here...">{{editNote.text}}</textarea>
   </div>
 </div>
