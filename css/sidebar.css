@@ -13,15 +13,23 @@
 .notes-list ul li {
   cursor: pointer;
   border-bottom: 1px solid #ebebeb;
-  border-left: 5px solid transparent;
+  border-left: 5px solid #00f;
   border-right: 2px solid #ebebeb;
-  -webkit-transition: background-color .4s !important;
+  -webkit-transition: background-color .25s !important;
   background-color: #f4f4f4;
-}
-
-.notes-list ul li .list-row__content {
+  margin-bottom: 10px;
   position: relative;
   z-index: 20;
+}
+
+.notes-list ul li:before {
+  content: "";
+  postion: absolute;
+  top: -3px;
+  left: -10px;
+  bottom: -5px;
+  border-bottom: 1px solid #0f0;
+
 }
 
 .notes-list ul li .deleteBtn {
@@ -31,8 +39,13 @@
 
 .notes-list ul li:hover {
   color: #fbfbfb;
-  -webkit-transition: background-color .4s !important;
+  -webkit-transition: background-color .25s !important;
   background-color: #40D2C3;
+}
+
+.label-one {
+  border-left: 5px solid #ff0;
+  border-bottom: 1ps solid #ebebeb;
 }
 
 .right {
@@ -70,5 +83,7 @@
   border-left: 5px solid #FF2F66 !important;
   border: none;
   border-right: 2px solid #ffffff !important;
+  /*border-top: 1px solid #FF2F66 !important;
+  border-bottom: 1px solid #FF2F66 !important;*/
 }
 
