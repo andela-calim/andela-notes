@@ -4,7 +4,7 @@
   padding: 0;
   min-height: 670px;
   border-right: 2px solid #ebebeb;
-  max-width: 318px;
+  /*max-width: 25;*/
   /*overflow-y: auto;*/
 }
 
@@ -20,6 +20,16 @@
   background-color: #fafafa;
 }
 
+.notes-list ul li .list-row__content{
+  position: relative;
+  z-index: 20;
+}
+
+.notes-list ul li .deleteBtn{
+  position: relative;
+  z-index: 30;
+}
+
 .notes-list ul li:hover {
   color: #fbfbfb;
   -webkit-transition: background-color .4s !important;
@@ -29,6 +39,11 @@
 .right {
   float: right;
   z-index: 999;
+  margin-top: 5px;
+}
+
+.deleteBtn {
+  margin-top: 11px;
 }
 
 .add-new-note {
