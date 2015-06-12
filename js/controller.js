@@ -82,6 +82,8 @@ app.controller('NoteCtrl', ['$scope', function($scope) {
     $scope.editNote = $scope.allNotes[0];
     $scope.allNotes[$scope.currentIndex].isSelected = false;
     $scope.allNotes[$scope.currentIndex + 1].isSelected = false;
+    $scope.allNotes[$scope.currentIndex].sync = false;
+    $scope.allNotes[$scope.currentIndex + 1].sync = false;
     $scope.currentIndex = 0;
     $scope.allNotes[$scope.currentIndex].isSelected = true;
     $scope.allNotes[$scope.currentIndex].sync = true;
