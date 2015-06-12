@@ -9,12 +9,6 @@ div#header.container-fluid .row {
   max-width: 1700px;
 }
 
-@media screen and (min-width: 1700px) {
-  div#header.container-fluid .row {
-    margin-left: 0;
-  }
-}
-
 #header .search-bar,
 #header .tool-bar {
   padding: 0 0 0 50px;
@@ -61,8 +55,6 @@ fieldset[disabled] .form-control.focus:not(textarea),
 }
 
 .navbar-form .form-control {
-  /*width: 20em;*/
-
   margin-left: 0em;
   padding-left: 2em;
   font-size: 2em;
@@ -80,27 +72,8 @@ div.user-menu {
   background-size: contain;
   border-radius: 50%;
   padding: 0 70px;
-  /*background-position: 0 0 10px 0;*/
-  /*padding-right: 100px;*/
-  /*width: 40px;*/
-
   height: 60px;
 }
-/*.formatting-tools li {
-  display: inline-block;
-  font-size: 1.2em;
-  text-align: center;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-}
-.user-menu {
-  background-color: #242424;
-  height: 50px;
-  width: 50px;
-}
-*/
-
 
 li.dropdown {
   font-size: .7em;
@@ -178,4 +151,43 @@ li.dropdown {
 
 .dropdown-menu li a{
   font-weight: bold !important;
+}
+
+@media screen and (min-width: 1700px) {
+  div#header.container-fluid .row {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1280px) {
+  #header .search-bar h1 {
+    font-size: 2.0em;
+    padding-left: 50%;
+  }
+  .search-field {
+    background-position: 3% 50%;
+  }
+  .navbar-form .form-control {
+    margin-left: 0;
+    padding-left: 2em;
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 1199px) {
+  #header .search-bar h1 {
+    font-size: 2.0em;
+    padding-left: 13%;
+  }
+}
+
+@media (max-width: 1024px) {
+  #header .search-bar h1 {
+    font-size: 2.0em;
+    padding-left: 65px;
+  }
+  #header .search-bar #logo {
+    position: absolute;
+    left: 15px;
+  }
 }
