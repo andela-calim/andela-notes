@@ -43,6 +43,7 @@
   bottom: 0;
   top: 0;
   padding: 20px 70px 0 20px;
+  overflow: scroll;
   /*  width: 90%;
   padding-right: 25%;
   overflow-y: hidden;
