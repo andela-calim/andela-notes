@@ -29,18 +29,7 @@ var app = angular.module('andeNote', [])
             $scope.allNotes.splice($scope.allNotes.indexOf(note), key);
           }
         };
-
-      }],
-      link: function(scope, elem, attr) {
-        var el = elem.find('.single-list');
-        var sideBar = angular.element('.sidebar');
-        var delBtn = el.find('.deleteBtn');
-
-        elem.find('.list-row__content').on('click', function() {
-          sideBar.find('li').removeClass('active');
-          $(elem).addClass('active');
-        });
-      }
+      }]
     }
   })
   .directive('noteArea', function() {
