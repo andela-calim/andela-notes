@@ -147,6 +147,9 @@ app.controller('NoteCtrl', ['$scope', '$timeout', function($scope, $timeout) {
   }, {
     icon: 'share-variant',
     tip: 'Share'
+  }, {
+    icon: 'tag-text-outline',
+    tip: 'Add Label'
   }];
 
   /********************
@@ -162,9 +165,6 @@ app.controller('NoteCtrl', ['$scope', '$timeout', function($scope, $timeout) {
     console.log($scope.noteView);
   });
 
-  $scope.test = function() {
-    console.log('Yo');
-  }
   $scope.toggleNoteView = function ($index) {
     console.log("Toggle called");
     $scope.noteView = !$scope.noteView;
