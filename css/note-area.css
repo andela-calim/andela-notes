@@ -13,7 +13,7 @@
   background-color: #FFF;
   padding: 0;
   height: 100%;
-  background: transparent url(/imgs/bg.jpg) no-repeat top left;
+  background: transparent url(../imgs/bg.jpg) no-repeat top left;
   background-size: cover
 }
 
