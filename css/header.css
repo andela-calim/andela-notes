@@ -5,7 +5,22 @@
   font-size: 70%;
 }
 
-#header .search-bar, #header .tool-bar {
+div#header.container-fluid .row{
+  max-width: 1440px;
+}
+
+@media screen and (min-width: 1440px) {
+  div#header.container-fluid .row {
+    margin-left: 0;
+  }
+}
+
+#header a {
+  color: #333 !important;
+}
+
+#header .search-bar,
+#header .tool-bar {
   padding: 0;
 }
 
@@ -38,12 +53,21 @@
   background-size: 30px;
 }
 
-fieldset[disabled] .form-control:not(textarea), .form-control-wrapper .form-control:not(textarea), .form-control:not(textarea), fieldset[disabled] .form-control:focus:not(textarea), .form-control-wrapper .form-control:focus:not(textarea), .form-control:focus:not(textarea), fieldset[disabled] .form-control.focus:not(textarea), .form-control-wrapper .form-control.focus:not(textarea), .form-control.focus:not(textarea) {
+fieldset[disabled] .form-control:not(textarea),
+.form-control-wrapper .form-control:not(textarea),
+.form-control:not(textarea),
+fieldset[disabled] .form-control:focus:not(textarea),
+.form-control-wrapper .form-control:focus:not(textarea),
+.form-control:focus:not(textarea),
+fieldset[disabled] .form-control.focus:not(textarea),
+.form-control-wrapper .form-control.focus:not(textarea),
+.form-control.focus:not(textarea) {
   height: 50px;
 }
 
 .navbar-form .form-control {
   /*width: 20em;*/
+
   margin-left: 0em;
   padding-left: 2em;
   font-size: 2em;
@@ -64,9 +88,9 @@ div.user-menu {
   /*background-position: 0 0 10px 0;*/
   /*padding-right: 100px;*/
   /*width: 40px;*/
+
   height: 60px;
 }
-
 /*.formatting-tools li {
   display: inline-block;
   font-size: 1.2em;
@@ -81,21 +105,22 @@ div.user-menu {
   width: 50px;
 }
 */
+
 @media (max-width: 1280px) {
   #header .search-bar h1 {
     font-size: 2.0em;
     padding-left: 50%;
   }
-
   .search-field {
     /*background: url("../imgs/search.png");*/
     /*background-repeat: no-repeat;*/
+
     background-position: 3% 50%;
     /*background-size: 30px;*/
   }
-
   .navbar-form .form-control {
     /*width: 20em;*/
+
     margin-left: 0;
     padding-left: 2em;
     font-size: 2em;
@@ -106,7 +131,6 @@ div.user-menu {
   #header .search-bar #logo {
     background-position: 15% 0;
   }
-
   #header .search-bar h1 {
     font-size: 2.0em;
     padding-left: 46%;
@@ -117,31 +141,21 @@ div.user-menu {
   #header .search-bar #logo {
     background-position: 0 0;
   }
-
   #header .search-bar h1 {
     font-size: 1.8em;
   }
 }
 
-/*@media (max-width: 600px) {
-  #header .search-bar #logo {
-    background-position: 50% 0;
-  }
-
-  #header .search-bar h1 {
-    visibility: hidden;
-  }
+li.dropdown {
+  font-size: .7em;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-@media (max-width: 320px) {
-  #header .search-bar #logo {
-    background-size: 50px;
-    background-position: 50% 30%;
-  }
+#header .pull-right {
+  margin-right: 20px;
 }
 
-@media (max-width: 240px) {
-  #header .search-bar #logo {
-    background-size: 40px;
-  }
-}*/
+#header li i {
+  font-style: normal;
+}
