@@ -3,7 +3,7 @@
 
 var app = angular.module('andeNote', [])
 
-  .directive('header', function() {
+.directive('header', function() {
     return {
       restrict: 'E',
       templateUrl: 'templates/header.html',
@@ -17,15 +17,15 @@ var app = angular.module('andeNote', [])
       replace: true
     };
   })
-  .directive('noteList', function(){
-    return{
+  .directive('noteList', function() {
+    return {
       restrict: 'E',
-      templateUrl:'templates/note-list.html',
+      templateUrl: 'templates/note-list.html',
       replace: true,
       controller: ['$scope', function($scope) {
         $scope.deleteNote = function(note, key) {
           var response = confirm("Are you sure you want to delete this note");
-          if(response === true){
+          if (response === true) {
             $scope.allNotes.splice($scope.allNotes.indexOf(note), key);
           }
         };
@@ -36,7 +36,7 @@ var app = angular.module('andeNote', [])
         var sideBar = angular.element('.sidebar');
         var delBtn = el.find('.deleteBtn');
 
-        elem.find('.list-row__content').on('click', function(){
+        elem.find('.list-row__content').on('click', function() {
           sideBar.find('li').removeClass('active');
           $(elem).addClass('active');
         });
@@ -55,10 +55,9 @@ var app = angular.module('andeNote', [])
       restrict: 'A',
       link: function(scope, elm) {
         var elem = $(elm[0]);
-        scope.$watch('changeBg', function(newVal) {
-          if (newVal) {
-            elem.addClass('bg');
-          }
+        scope.$watch('changeBg', function() {
+          if (typeof scope.changeBg === 'undefined') {return;}
+          elem.toggleClass('bg');
         });
       }
     };
