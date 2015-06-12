@@ -1,0 +1,20 @@
+<div class="notes-area col-lg-9" ng-init="selectNote(0)">
+  <div class="bgtrans" change-bg>
+    <div class="editor-wrap">
+      <div class="toolbox">
+        <div>
+          <ul>
+            <li ng-repeat="tool in toolbox" class="wrapper">
+              <i class="mdi mdi-{{tool.icon}}"></i>
+              <div class="tooltip">{{tool.tip}}</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="editor">
+        <input type="text" class="title" value="{{editNote.title}}" placeholder="Untitled">
+        <textarea placeholder="Type your note here...">{{editNote.text}}</textarea>
+      </div>
+    </div>
+  </div>
+</div>

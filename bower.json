@@ -1,0 +1,27 @@
+{
+  "name": "andela-notes",
+  "version": "0.0.0",
+  "homepage": "https://github.com/andela-calim/andela-notes",
+  "authors": [
+    "Chiemeka Alim <chiemeka.alim@andela.co>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-material-design": "~0.3.0",
+    "bootstrap": "~3.3.4",
+    "alertify.js": "~0.3.11",
+    "angular": "~1.4.0",
+    "lumx": "~0.3.35",
+    "slidebars": "~0.10.3",
+    "ssm": "~2.4.1"
+  }
+}

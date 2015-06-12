@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="andeNote">
+
+<head>
+  <title>Crow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="./css/vendor-css/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="./css/vendor-css/bootstrap-material-design/dist/css/material-fullpalette.css">
+  <link rel="stylesheet" type="text/css" href="./css/vendor-css/bootstrap-material-design/dist/css/ripples.css">
+  <link rel="stylesheet" type="text/css" href="./css/vendor-css/lumx/dist/lumx.css">
+  <link rel="stylesheet" type="text/css" href="./css/vendor-css/mdi/css/materialdesignicons.css">
+  <link rel="stylesheet" type="text/css" href="./css/vendor-css/slidebars/dist/slidebars.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/vendor-css/alertify.js/themes/alertify.core.css">
+  <link rel="stylesheet" type="text/css" href="./css/alertify.bootstrap.css">
+  
+  <link rel="stylesheet" type="text/css" href="./css/app.css">
+  <link rel="stylesheet" type="text/css" href="./css/header.css">
+  <link rel="stylesheet" type="text/css" href="./css/mobile-header.css">
+  <link rel="stylesheet" type="text/css" href="./css/note-area.css">
+  <link rel="stylesheet" type="text/css" href="./css/sidebar.css">
+
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300|Vollkorn">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+
+<body ng-controller="NoteCtrl">
+  <div ng-show='desktop'>
+    <header></header>
+    <div id="main-app" class="container-fluid">
+      <div class="row">
+        <sidebar></sidebar>
+        <note-area></note-area>
+      </div>
+    </div>
+  </div>
+  <div ng-hide='desktop'>
+    <div class="sb-slidebar sb-left .sb-style-push">
+      <div class="sp-container">
+        <div class="side-pane-logo">
+          <img src="/imgs/crow.png">
+        </div>
+      </div>
+      <div class="notes-bar">
+        <button class="as-text view-notes note-button">
+          <p id="m-notes">Notes</p>
+        </button>
+      </div>
+    </div>
+    <div id="sb-site">
+      <mobile-header></mobile-header>
+      <m-note-area></m-note-area>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="./js/vendor-js/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="./js/vendor-js/velocity/velocity.js"></script>
+  <script type="text/javascript" src="./js/vendor-js/moment/min/moment-with-locales.js"></script>
+  <script type="text/javascript" src="./js/vendor-js/bootstrap/dist/js/bootstrap.js"></script>
+  <script type="text/javascript" src="./js/vendor-js/bootstrap-material-design/dist/js/ripples.js"></script>
+  <script type="text/javascript" src="./js/vendor-js/bootstrap-material-design/dist/js/material.js"></script>
+  <script type="text/javascript" src="./js/vendor-js/alertify.js/lib/alertify.js"></script>
+  <script type="text/javascript" src="./js/vendor-js/slidebars/dist/slidebars.min.js"></script>
+  <script type="text/javascript" src="./js/vendor-js/ssm/dist/ssm.min.js"></script>
+
+  <script type="text/javascript" src="./js/vendor-js/angular/angular.js"></script>
+  <script type="text/javascript" src="./js/vendor-js/lumx/dist/lumx.js"></script>
+
+  <script type="text/javascript" src="./js/app.js"></script>
+  <script type="text/javascript" src="./js/controller.js"></script>
+</body>
+
+</html>

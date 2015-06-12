@@ -1,0 +1,12 @@
+<li ng-class="{'active': note.isSelected}" ng-style="{'border-left': '5px solid {{ note.label }}'}" class="single-list list-row list-row--multi-line" ng-click="selectNote($index)">
+  <div class="list-row__content">
+    <span class="display-block fs-body-1 tc-black-2" style="font-size: 12px;"> Last Edited: {{ note.lastEdited | date: 'MMM d, y  @ h:mm:ss a'}}</span>
+    <span class="display-block fs-title mb" style="font-family: Vollkorn;">{{ note.title }}</span>
+    <span class="display-block fs-ody-1">{{ note.excerpt }}</span>
+  </div> 
+  <span class="right">
+    <i ng-if="note.sync" class="icon icon--s icon--green icon--flat mdi mdi-sync"></i>
+    <!-- <i ng-if="note.sync" class="icon icon--s icon--amber icon--flat mdi mdi-sync-off"></i> -->
+  </span>
+  <span ng-click="deleteNote(note,$index)" class="right deleteBtn"><img src="imgs/delete.png"></span>      
+</li>

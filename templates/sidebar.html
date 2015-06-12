@@ -1,0 +1,11 @@
+<div class="sidebar col-xs-3">
+  <div class="notes-list">
+    <ul class="list mt++">
+      <note-list ng-repeat="note in allNotes track by $index"></note-list>
+    </ul>
+  </div>
+
+  <div class="add-new-note" ng-click="addNote()">
+    <i class="icon icon--xl icon--white icon--flat mdi mdi-plus"></i>
+  </div>
+</div>

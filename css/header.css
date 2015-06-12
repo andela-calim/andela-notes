@@ -1,0 +1,193 @@
+#header {
+  background-color: #EBEBEB;
+  height: 60px;
+  border-bottom: 2px solid #d9d9d9;
+  font-size: 70%;
+}
+
+div#header.container-fluid .row {
+  max-width: 1700px;
+}
+
+#header .search-bar,
+#header .tool-bar {
+  padding: 0 0 0 50px;
+}
+
+#header .search-bar #logo {
+  background: transparent url("../imgs/crow.png") no-repeat top left;
+  background-size: 60px;
+}
+
+#header .search-bar h1 {
+  font-size: 2.2em;
+  line-height: 60px;
+  margin: 0;
+  font-weight: bold;
+  padding-left: 70px;
+  color: #d71a5c;
+}
+
+.nav > .dropdown > .dropdown-toggle {
+  line-height: 60px;
+  font-size: 2em;
+  display: inline;
+  padding-left: 3em;
+}
+
+.search-field {
+  background: url("../imgs/search.png");
+  background-repeat: no-repeat;
+  background-position: 3% 50%;
+  background-size: 30px;
+}
+
+fieldset[disabled] .form-control:not(textarea),
+.form-control-wrapper .form-control:not(textarea),
+.form-control:not(textarea),
+fieldset[disabled] .form-control:focus:not(textarea),
+.form-control-wrapper .form-control:focus:not(textarea),
+.form-control:focus:not(textarea),
+fieldset[disabled] .form-control.focus:not(textarea),
+.form-control-wrapper .form-control.focus:not(textarea),
+.form-control.focus:not(textarea) {
+  height: 50px;
+}
+
+.navbar-form .form-control {
+  margin-left: 0em;
+  padding-left: 2em;
+  font-size: 2em;
+}
+
+div.user-menu h4 {
+  line-height: 60px;
+  position: absolute;
+  right: 120px;
+}
+
+div.user-menu {
+  width: 60px !important;
+  background: url("../imgs/chi.jpg") no-repeat center;
+  background-size: contain;
+  border-radius: 50%;
+  padding: 0 70px;
+  height: 60px;
+}
+
+li.dropdown {
+  font-size: .7em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  height: 56px;
+}
+
+#header .pull-right {
+  margin-right: 20px;
+}
+
+#header li i {
+  font-style: normal;
+  display: inline-block;
+  float: left;
+}
+
+#header a.dropdown-toggle {
+  color: #333 !important;
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  width: 100%;
+}
+
+#header .avatar {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  position: relative;
+  background: url(../imgs/chi.jpg);
+  background-size: 60px;
+  width: 60px;
+  display: inline-block;
+  height: 60px;
+  margin-right: 8px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+#header .avatar::after {
+  content: " ";
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  width: 100%;
+  border-radius: 50%;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+}
+
+#header a.dropdown-toggle:hover .avatar::after {
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+}
+
+#header li a:hover {
+  background-color: inherit;
+}
+
+.dropdown-menu {
+  background-color: #ebebeb;
+}
+
+.dropdown-menu li {
+  letter-spacing: 0px;
+}
+
+.dropdown-menu li a{
+  font-weight: bold !important;
+}
+
+@media screen and (min-width: 1700px) {
+  div#header.container-fluid .row {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1280px) {
+  #header .search-bar h1 {
+    font-size: 2.0em;
+    padding-left: 50%;
+  }
+  .search-field {
+    background-position: 3% 50%;
+  }
+  .navbar-form .form-control {
+    margin-left: 0;
+    padding-left: 2em;
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 1199px) {
+  #header .search-bar h1 {
+    font-size: 2.0em;
+    padding-left: 13%;
+  }
+}
+
+@media (max-width: 1024px) {
+  #header .search-bar h1 {
+    font-size: 2.0em;
+    padding-left: 65px;
+  }
+  #header .search-bar #logo {
+    position: absolute;
+    left: 15px;
+  }
+}

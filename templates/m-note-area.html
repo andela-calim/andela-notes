@@ -1,0 +1,24 @@
+<div>
+<div ng-show="noteView" class="m-note-area m-contain">
+  <div class="m-formating-tools">
+    <div ng-repeat="tool in toolbox">
+      <button class="as-text f-tools" lx-tooltip="{{tool.tip}}"><i class="mdi mdi-{{tool.icon}}"></i></button>
+    </div>
+  </div>
+  <div class="m-editor">
+    <input type="text" class="title" value="{{editNote.title}}" placeholder="Untitled">
+    <textarea placeholder="Type your note here...">{{editNote.text}}</textarea>
+  </div>
+  <button class="btn btn--xl btn--fab m-new-note" lx-ripple><i class="mdi mdi-plus m-plus"></i></button>
+</div>
+
+  <div ng-hide="noteView" class="m-note-area m-contain note-positioner">
+    <button class="as-text jumbotron m-note-card" ng-repeat="note in allNotes track by $index" ng-click="toggleNoteView($index)">
+        <span class="display-block fs-body-1 tc-black-2 m-date">{{ note.lastEdited | date }}</span>
+        <h3 class="m-title">{{ note.title }}</h3>
+        <p>{{ note.excerpt }}</p>
+    </button>
+    <div class="clear"></div>
+  </div>
+  <button ng-click="addNote()" class="btn btn--xl btn--fab m-new-note" lx-ripple><i class="mdi mdi-plus m-plus"></i></button>
+</div>

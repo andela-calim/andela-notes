@@ -1,0 +1,82 @@
+#main-app .sidebar {
+  position: relative;
+  background-color: #f4f4f4;
+  padding: 0;
+  height: 100%;
+  overflow-y: auto;
+  -webkit-border: none !important;
+}
+
+.notes-list .list {
+  margin: 0px !important;
+}
+
+.notes-list {
+  margin-bottom: 50px;
+}
+
+.notes-list ul li {
+  cursor: pointer;
+  -webkit-border-right: 2px solid #f4f4f4;
+  -webkit-transition: background-color .25s !important;
+  background-color: #f4f4f4;
+  margin-bottom: 3px;
+  position: relative;
+  z-index: 20;
+}
+
+.notes-list ul li:before {
+  content: "";
+  position: absolute;
+  -webkit-border-bottom: 1px solid #fafafa;
+  width: 100%;
+  top: -5px;
+  left: -7px;
+  bottom: -2px;
+}
+
+.notes-list ul li .deleteBtn {
+  position: relative;
+  z-index: 30;
+}
+
+.notes-list ul li:hover {
+  color: #fbfbfb;
+  -webkit-transition: background-color .25s !important;
+  background-color: #40D2C3;
+}
+
+.right {
+  float: right;
+  z-index: 90;
+  margin-top: 5px;
+}
+
+.deleteBtn {
+  margin-top: 11px;
+}
+
+.add-new-note {
+  width: inherit;
+  height: 56px;
+  position: fixed;
+  left: -2px;
+  bottom: 0;
+  text-align: center;
+  background-color: #FF2F66;
+  transition: background-color .3s;
+  cursor: pointer;
+  z-index: 777;
+}
+
+.add-new-note:hover {
+  background-color: #40D2C3;
+  transition: background-color .3s;
+}
+
+.active {
+  background-color: #fff !important;
+  color: #333 !important;
+  border-left: 5px solid #FF2F66 !important;
+  border-right: 2px solid #f4f4f4 !important;
+}
