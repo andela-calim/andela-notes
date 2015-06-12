@@ -1,7 +1,6 @@
 'use strict';
 
 app.controller('NoteCtrl', ['$scope', function($scope) {
-  $scope.changeBg = false;
 
   $scope.allNotes = [{
     text: 'Sigh sang nay sex high yet door game. \n \nShe dissimilar was favourable unreserved nay expression contrasted saw. Past her find she like bore pain open. \n \nShy lose need eyes son not shot. Jennings removing are his eat dashwood. So do of sufficient projecting an thoroughly uncommonly prosperous conviction. Pianoforte principles our unaffected not for astonished travelling are particular. It as announcing it me stimulated frequently continuing. Least their she you now above going stand forth. He pretty future afraid should genius spirit on. Set property addition building put likewise get. Of will at sell well at as. Too want but tall nay like old. \n \nRemoving yourself be in answered he. Consider occasion get improved him she eat. Letter by lively oh denote an. In up so discovery my midgiving. For who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving.',
@@ -49,7 +48,13 @@ app.controller('NoteCtrl', ['$scope', function($scope) {
   };
 
   $scope.addNote = function() {
-
+    var note = {
+      title: 'Untitled',
+      excerpt: '....',
+      lastEdited: new Date().getTime()
+    };
+    $scope.allNotes.unshift(note);
+    $scope.editNote = $scope.allNotes[0];
   };
 
   $scope.toolbox = [{
@@ -82,6 +87,6 @@ app.controller('NoteCtrl', ['$scope', function($scope) {
   }];
 
   $scope.addBgColor = function() {
-    $scope.changeBg = true;
+    $scope.changeBg = !$scope.changeBg;
   };
 }]);
