@@ -1,4 +1,4 @@
-<li ng-class="{'active': note.isSelected}" class="single-list list-row list-row--multi-line" ng-click="selectNote($index)">
+<li ng-class="{'active': note.isSelected}" ng-style="{'border-left': '5px solid {{ note.label }}'}" class="single-list list-row list-row--multi-line" ng-click="selectNote($index)">
   <div class="list-row__content">
     <span class="display-block fs-body-1 tc-black-2" style="font-size: 12px;"> Last Edited: {{ note.lastEdited | date }}</span>
     <span class="display-block fs-title mb" style="font-family: Vollkorn;">{{ note.title }}</span>
