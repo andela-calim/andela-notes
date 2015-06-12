@@ -18,6 +18,7 @@
   "dependencies": {
     "bootstrap-material-design": "~0.3.0",
     "bootstrap": "~3.3.4",
-    "lumx": "~0.3.35"
+    "lumx": "~0.3.35",
+    "alertify.js": "~0.3.11"
   }
 }
