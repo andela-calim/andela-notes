@@ -10,6 +10,9 @@ var app = angular.module('andeNote', [])
       link: function (scope, element) {
         var sidePane = new $.slidebars();
         var toggle = false;
+        $('.view-notes').on('click', function(){
+          $('.f-tools').trigger('click');
+        });
         $('.nav-call').on('click', function() {
           toggle = !toggle;
           if (toggle !== false) {

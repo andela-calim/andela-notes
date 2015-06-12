@@ -24,30 +24,34 @@
 </head>
 
   <body ng-controller="NoteCtrl">
-
-  <!--   <header></header>
-
-    <div id="main-app" class="container-fluid">
-      <div class="row">
-        <sidebar></sidebar>
-        <note-area></note-area>
-      </div>
-    </div> -->
-
-    <div class="sb-slidebar sb-left .sb-style-push">
-      <div class="sp-container">
-        <div class="side-pane-logo">
-          <img src="/imgs/crow.png">
+    <div ng-show='desktop'>
+      <header></header>
+      <div id="main-app" class="container-fluid">
+        <div class="row">
+          <sidebar></sidebar>
+          <note-area></note-area>
         </div>
       </div>
-      <div class="notes-bar">
-        <button class="as-text"><p id="m-notes">Notes</p></button>
+    </div>
+    <div ng-hide='desktop'>
+      <div class="sb-slidebar sb-left .sb-style-push">
+        <div class="sp-container">
+          <div class="side-pane-logo">
+            <img src="/imgs/crow.png">
+          </div>
+        </div>
+        <div class="notes-bar">
+          <button class="as-text view-notes">
+            <p id="m-notes">Notes</p>
+          </button>
+        </div>
+      </div>
+      <div id="sb-site">
+        <mobile-header></mobile-header>
+        <m-note-area></m-note-area>
       </div>
     </div>
-    <div id="sb-site">
-      <mobile-header></mobile-header>
-      <m-note-area></m-note-area>
-    </div>
+
 
     <script type="text/javascript" src="./lib/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="./lib/bootstrap/dist/js/bootstrap.js"></script>
