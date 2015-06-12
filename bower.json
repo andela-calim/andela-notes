@@ -18,7 +18,10 @@
   "dependencies": {
     "bootstrap-material-design": "~0.3.0",
     "bootstrap": "~3.3.4",
+    "alertify.js": "~0.3.11",
+    "angular": "~1.4.0",
     "lumx": "~0.3.35",
-    "alertify.js": "~0.3.11"
+    "slidebars": "~0.10.3",
+    "ssm": "~2.4.1"
   }
 }

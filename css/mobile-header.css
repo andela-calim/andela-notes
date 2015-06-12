@@ -1,0 +1,79 @@
+.card {
+  background-color: #EBEBEB;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+span.logo-text {
+  background: url("../imgs/crow.png") no-repeat;
+  background-size: contain;
+  padding-left: 50px;
+  color: #ff3366;
+  font-weight: 500;
+  font-family: 'Vollkorn', serif;
+}
+
+i.mdi-menu {
+  color: #ff3366 !important;
+}
+
+div.avatar {
+  background: url("../imgs/chi.jpg") no-repeat;
+  background-size: cover;
+  border-radius: 40px;
+  padding-left: 50px;
+}
+
+.side-pane-logo {
+  width: 80px;
+  height: 80px;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.sb-slidebar.sb-active {
+  text-align: center;
+}
+
+.sp-container {
+  border-bottom: 1px solid;
+}
+
+.notes-bar {
+  text-align: left;
+  border-bottom: 1px solid;
+  background-color: #222;
+  border-left: 5px solid transparent;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+
+.notes-bar:hover {
+  transition: all 0.25s;
+  background-color: #333;
+  border-left: 5px solid #FF2F66;
+  cursor: pointer;
+}
+
+#m-notes {
+  color: #fff;
+  font-size: 16px;
+  padding: 20px 0 25px 20px;
+  font-weight: 700;
+}
+
+.as-text {
+  background:none;
+  border:none;
+  margin:0;
+  padding:0;
+}
+
+.note-button {
+  width: 100%;
+  text-align: left;
+}
+
+
+

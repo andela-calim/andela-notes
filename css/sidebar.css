@@ -11,6 +11,10 @@
   margin: 0px !important;
 }
 
+.notes-list {
+  margin-bottom: 50px;
+}
+
 .notes-list ul li {
   cursor: pointer;
   -webkit-border-right: 2px solid #f4f4f4;

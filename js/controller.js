@@ -1,6 +1,34 @@
 'use strict';
 
-app.controller('NoteCtrl', ['$scope', function($scope) {
+app.controller('NoteCtrl', ['$scope', '$timeout', function($scope, $timeout) {
+
+  $scope.desktop = true
+
+  ssm.addState({
+    id: 'desktop',
+    minWidth: 860,
+    onEnter: function() {
+      console.log('desktop');
+      $scope.desktop = true;
+      console.log($scope.desktop);
+      $timeout(function() {
+        $scope.$apply();
+      }, 0);
+    }
+  }).ready();
+
+  ssm.addState({
+    id: 'mobile',
+    maxWidth: 860,
+    onEnter: function(){
+        console.log('It works');
+        $scope.desktop = false;
+        console.log($scope.desktop);
+        $timeout(function() {
+          $scope.$apply();
+        }, 0);
+    }
+  }).ready();
 
   $scope.allNotes = [{
     text: 'Sigh sang nay sex high yet door game. \n \nShe dissimilar was favourable unreserved nay expression contrasted saw. Past her find she like bore pain open. \n \nShy lose need eyes son not shot. Jennings removing are his eat dashwood. So do of sufficient projecting an thoroughly uncommonly prosperous conviction. Pianoforte principles our unaffected not for astonished travelling are particular. It as announcing it me stimulated frequently continuing. Least their she you now above going stand forth. He pretty future afraid should genius spirit on. Set property addition building put likewise get. Of will at sell well at as. Too want but tall nay like old. \n \nRemoving yourself be in answered he. Consider occasion get improved him she eat. Letter by lively oh denote an. In up so discovery my midgiving. For who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving.',
@@ -60,7 +88,8 @@ app.controller('NoteCtrl', ['$scope', function($scope) {
     $scope.allNotes[i].excerpt = excerpt;
   }
 
-  $scope.currentIndex = null
+  $scope.currentIndex = null;
+
   $scope.selectNote = function($index) {
     if ($scope.currentIndex !== null) {
       $scope.allNotes[$scope.currentIndex].isSelected = false;
@@ -79,7 +108,9 @@ app.controller('NoteCtrl', ['$scope', function($scope) {
       lastEdited: new Date().getTime()
     };
     $scope.allNotes.unshift(note);
+
     $scope.editNote = $scope.allNotes[0];
+
     $scope.allNotes[$scope.currentIndex].isSelected = false;
     $scope.allNotes[$scope.currentIndex + 1].isSelected = false;
     $scope.allNotes[$scope.currentIndex].sync = false;
@@ -118,11 +149,32 @@ app.controller('NoteCtrl', ['$scope', function($scope) {
     tip: 'Share'
   }];
 
+  /********************
+  MOBILE
+  ********************/
   $scope.addBgColor = function() {
     $scope.changeBg = !$scope.changeBg;
     if ($scope.changeBg) {
       alertify.success('Default background theme activated. Upgrade to Premium to use your own background');
       return false;
     }
+  };
+
+  $scope.noteView = true;
+  $('.view-notes').on('click', function(){
+    $scope.toggleNoteView();
+    console.log($scope.noteView);
+  });
+
+  $scope.test = function() {
+    console.log('Yo');
+  }
+  $scope.toggleNoteView = function ($index) {
+    console.log("Toggle called");
+    $scope.noteView = !$scope.noteView;
+    $timeout(function() {
+      $scope.$apply();
+    }, 10);
+    $scope.editNote = $scope.allNotes[$index];
   };
 }]);
