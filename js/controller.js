@@ -2,7 +2,7 @@
 
 app.controller('NoteCtrl', ['$scope', '$timeout', function($scope, $timeout) {
 
-  $scope.desktop = true
+  $scope.desktop = true;
 
   ssm.addState({
     id: 'desktop',
@@ -162,11 +162,9 @@ app.controller('NoteCtrl', ['$scope', '$timeout', function($scope, $timeout) {
   $scope.noteView = true;
   $('.view-notes').on('click', function(){
     $scope.toggleNoteView();
-    console.log($scope.noteView);
   });
 
   $scope.toggleNoteView = function ($index) {
-    console.log("Toggle called");
     $scope.noteView = !$scope.noteView;
     $timeout(function() {
       $scope.$apply();
