@@ -5,7 +5,7 @@
   font-size: 70%;
 }
 
-div#header.container-fluid .row{
+div#header.container-fluid .row {
   max-width: 1440px;
 }
 
@@ -13,10 +13,6 @@ div#header.container-fluid .row{
   div#header.container-fluid .row {
     margin-left: 0;
   }
-}
-
-#header a {
-  color: #333 !important;
 }
 
 #header .search-bar,
@@ -150,6 +146,7 @@ li.dropdown {
   font-size: .7em;
   font-weight: bold;
   letter-spacing: 1px;
+  height: 56px;
 }
 
 #header .pull-right {
@@ -158,4 +155,63 @@ li.dropdown {
 
 #header li i {
   font-style: normal;
+  display: inline-block;
+  float: left;
+}
+
+#header a.dropdown-toggle {
+  color: #333 !important;
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  width: 100%;
+}
+
+#header .avatar {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  position: relative;
+  background: url(../imgs/chi.jpg);
+  background-size: 60px;
+  width: 60px;
+  display: inline-block;
+  height: 60px;
+  margin-right: 8px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+#header .avatar::after {
+  content: " ";
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  width: 100%;
+  border-radius: 50%;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+}
+
+#header a.dropdown-toggle:hover .avatar::after {
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+}
+
+#header li a:hover {
+  background-color: inherit;
+}
+
+.dropdown-menu {
+  background-color: #ebebeb;
+}
+
+.dropdown-menu li {
+  letter-spacing: 0px;
 }
