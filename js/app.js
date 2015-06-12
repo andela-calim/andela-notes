@@ -36,10 +36,10 @@ var app = angular.module('andeNote', [])
         var sideBar = angular.element('.sidebar');
         var delBtn = el.find('.deleteBtn');
 
-        elem.find('.list-row__content').on('click', function() {
-          sideBar.find('li').removeClass('active');
-          $(elem).addClass('active');
-        });
+        // elem.find('.list-row__content').on('click', function() {
+        //   sideBar.find('li').removeClass('active');
+        //   $(elem).addClass('active');
+        // });
       }
     }
   })
