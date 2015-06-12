@@ -1,7 +1,3 @@
-.bg {
-  background-color: #fff !important;
-}
-
 .card {
   background-color: #EBEBEB;
   position: fixed;
@@ -62,3 +58,6 @@ div.avatar {
   margin:0;
   padding:0;
 }
+
+
+
