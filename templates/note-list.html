@@ -1,7 +1,7 @@
-<li ng-class="{'active': note.isSelected}" class="single-list list-row list-row--multi-line" ng-click="selectNote($index)">
+<li ng-class="{'active': $index == 0}" class="single-list list-row list-row--multi-line" >
   <div class="list-row__content">
-    <span class="display-block fs-body-1 tc-black-2" style="font-size: 12px;"> Last Edited: {{ note.lastEdited | date }}</span>
-    <span class="display-block fs-title mb" style="font-family: Vollkorn;">{{ note.title }}</span>
+    <span class="display-block fs-body-1 tc-black-2">{{ note.lastEdited | date }}</span>
+    <span class="display-block fs-title mb">{{ note.title }}</span>
     <span class="display-block fs-ody-1">{{ note.excerpt }}</span>
   </div> 
   <span class="right">

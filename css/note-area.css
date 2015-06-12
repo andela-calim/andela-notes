@@ -43,7 +43,6 @@
   bottom: 0;
   top: 0;
   padding: 20px 70px 0 20px;
-  overflow: scroll;
   /*  width: 90%;
   padding-right: 25%;
   overflow-y: hidden;
@@ -182,11 +181,11 @@ li.wrapper:hover {
   -ms-transform: translateY(10px);
   -o-transform: translateY(10px);
   transform: translateY(10px);
-  -webkit-transition: all .25s ease-in !important;
-  -moz-transition: all .25s ease-in !important;
-  -ms-transition: all .25s ease-in !important;
-  -o-transition: all .25s ease-in !important;
-  transition: all .25s ease-in !important;
+  -webkit-transition: all .25s ease-in;
+  -moz-transition: all .25s ease-in;
+  -ms-transition: all .25s ease-in;
+  -o-transition: all .25s ease-in;
+  transition: all .25s ease-in;
 }
 /* This bridges the gap so you can mouse into the tooltip without it disappearing */
 

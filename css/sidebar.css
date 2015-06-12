@@ -12,23 +12,16 @@
 
 .notes-list ul li {
   cursor: pointer;
-  border-left: 5px solid #00f;
-  border-right: 2px solid #f4f4f4;
-  -webkit-transition: background-color .25s !important;
+  border-bottom: 1px solid #ebebeb;
+  border-left: 5px solid transparent;
+  border-right: 2px solid #ebebeb;
+  -webkit-transition: background-color .4s !important;
   background-color: #f4f4f4;
-  margin-bottom: 3px;
-  position: relative;
-  z-index: 20;
 }
 
-.notes-list ul li:before {
-  content: "";
-  position: absolute;
-  border-bottom: 1px solid #fafafa;
-  width: 100%;
-  top: -5px;
-  left: -7px;
-  bottom: -2px;
+.notes-list ul li .list-row__content {
+  position: relative;
+  z-index: 20;
 }
 
 .notes-list ul li .deleteBtn {
@@ -38,7 +31,7 @@
 
 .notes-list ul li:hover {
   color: #fbfbfb;
-  -webkit-transition: background-color .25s !important;
+  -webkit-transition: background-color .4s !important;
   background-color: #40D2C3;
 }
 
@@ -66,6 +59,7 @@
 }
 
 .add-new-note:hover {
+  color: #fbfbfb;
   background-color: #40D2C3;
   transition: background-color .3s;
 }
@@ -76,11 +70,5 @@
   border-left: 5px solid #FF2F66 !important;
   border: none;
   border-right: 2px solid #ffffff !important;
-  border-top: 1px solid #FF2F66;
-  border-bottom: 1px solid #FF2F66 !important;
-}
-
-.active:first-child {
-  border-top: none !important;
 }
 
