@@ -47,7 +47,13 @@ app.controller('NoteCtrl', ['$scope', function($scope) {
   };
 
   $scope.addNote = function() {
-
+    var note = {
+      title: 'Untitled',
+      excerpt: '....',
+      lastEdited: new Date().getTime()
+    };
+    $scope.allNotes.unshift(note);
+    $scope.editNote = $scope.allNotes[0];
   };
 
   $scope.toolbox = [{
