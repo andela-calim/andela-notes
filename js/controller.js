@@ -1,41 +1,33 @@
 'use strict';
 
-app.controller('NoteCtrl', ['$scope', function($scope) {
+app.controller('NoteCtrl', ['$scope', '$timeout', function($scope, $timeout) {
 
-  var screenWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-
-  $scope.desktop = true;
-  if (screenWidth > 860) {
-    $scope.desktop = true;
-  }
-
-  function debounce(func, wait, immediate) {
-    var timeout;
-    return function() {
-      var context = this,
-        args = arguments;
-      var later = function() {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-      var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
-    };
-  };
-
-  $(window).on('resize', debounce(function() {
-
-    // console.log('Resized');
-        screenWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    if (screenWidth > 860) {
-      $scope.desktop = !$scope.desktop;
+   $scope.desktop = true
+  ssm.addState({
+    id: 'desktop',
+    minWidth: 860,
+    onEnter: function() {
+      console.log('desktop');
+      $scope.desktop = true;
+      console.log($scope.desktop);
+      $timeout(function() {
+        $scope.$apply();
+      }, 0);
     }
-    $scope.$apply();
-  }, 350));
+  }).ready();
 
-
+  ssm.addState({
+    id: 'mobile',
+    maxWidth: 860,
+    onEnter: function(){
+        console.log('It works');
+        $scope.desktop = false;
+        console.log($scope.desktop);
+        $timeout(function() {
+          $scope.$apply();
+        }, 0);
+    }
+  }).ready();
 
   $scope.allNotes = [{
     text: 'Sigh sang nay sex high yet door game. \n \nShe dissimilar was favourable unreserved nay expression contrasted saw. Past her find she like bore pain open. \n \nShy lose need eyes son not shot. Jennings removing are his eat dashwood. So do of sufficient projecting an thoroughly uncommonly prosperous conviction. Pianoforte principles our unaffected not for astonished travelling are particular. It as announcing it me stimulated frequently continuing. Least their she you now above going stand forth. He pretty future afraid should genius spirit on. Set property addition building put likewise get. Of will at sell well at as. Too want but tall nay like old. \n \nRemoving yourself be in answered he. Consider occasion get improved him she eat. Letter by lively oh denote an. In up so discovery my midgiving. For who thoroughly her boy estimating conviction. Removed demands expense account in outward tedious do. Particular way thoroughly unaffected projection favourable mrs can projecting own. Thirty it matter enable become admire in giving.',
