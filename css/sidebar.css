@@ -4,6 +4,7 @@
   padding: 0;
   height: 100%;
   overflow-y: auto;
+  -webkit-border: none !important;
 }
 
 .notes-list .list {
@@ -12,8 +13,7 @@
 
 .notes-list ul li {
   cursor: pointer;
-  border-left: 5px solid #00f;
-  border-right: 2px solid #f4f4f4;
+  -webkit-border-right: 2px solid #f4f4f4;
   -webkit-transition: background-color .25s !important;
   background-color: #f4f4f4;
   margin-bottom: 3px;
@@ -24,7 +24,7 @@
 .notes-list ul li:before {
   content: "";
   position: absolute;
-  border-bottom: 1px solid #fafafa;
+  -webkit-border-bottom: 1px solid #fafafa;
   width: 100%;
   top: -5px;
   left: -7px;
@@ -74,13 +74,5 @@
   background-color: #fff !important;
   color: #333 !important;
   border-left: 5px solid #FF2F66 !important;
-  border: none;
-  border-right: 2px solid #ffffff !important;
-  border-top: 1px solid #FF2F66;
-  border-bottom: 1px solid #FF2F66 !important;
+  border-right: 2px solid #f4f4f4 !important;
 }
-
-.active:first-child {
-  border-top: none !important;
-}
-
