@@ -101,45 +101,6 @@ div.user-menu {
 }
 */
 
-@media (max-width: 1280px) {
-  #header .search-bar h1 {
-    font-size: 2.0em;
-    padding-left: 50%;
-  }
-  .search-field {
-    /*background: url("../imgs/search.png");*/
-    /*background-repeat: no-repeat;*/
-
-    background-position: 3% 50%;
-    /*background-size: 30px;*/
-  }
-  .navbar-form .form-control {
-    /*width: 20em;*/
-
-    margin-left: 0;
-    padding-left: 2em;
-    font-size: 2em;
-  }
-}
-
-@media (max-width: 1024px) {
-  #header .search-bar #logo {
-    background-position: 15% 0;
-  }
-  #header .search-bar h1 {
-    font-size: 2.0em;
-    padding-left: 46%;
-  }
-}
-
-@media (max-width: 768px) {
-  #header .search-bar #logo {
-    background-position: 0 0;
-  }
-  #header .search-bar h1 {
-    font-size: 1.8em;
-  }
-}
 
 li.dropdown {
   font-size: .7em;
