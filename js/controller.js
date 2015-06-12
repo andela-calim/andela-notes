@@ -4,18 +4,36 @@ app.controller('NoteCtrl', ['$scope', function($scope) {
 
   var screenWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
-  // $scope.desktop = true;
+  $scope.desktop = true;
   if (screenWidth > 860) {
     $scope.desktop = true;
   }
 
-  $(window).on('resize', function() {
-    screenWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this,
+        args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+  $(window).on('resize', debounce(function() {
+
+    // console.log('Resized');
+        screenWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     if (screenWidth > 860) {
       $scope.desktop = !$scope.desktop;
     }
     $scope.$apply();
-  });
+  }, 350));
 
 
 
