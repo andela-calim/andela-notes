@@ -2,7 +2,8 @@
 
 app.controller('NoteCtrl', ['$scope', '$timeout', function($scope, $timeout) {
 
-   $scope.desktop = true
+  $scope.desktop = true
+
   ssm.addState({
     id: 'desktop',
     minWidth: 860,
@@ -107,7 +108,9 @@ app.controller('NoteCtrl', ['$scope', '$timeout', function($scope, $timeout) {
       lastEdited: new Date().getTime()
     };
     $scope.allNotes.unshift(note);
+
     $scope.editNote = $scope.allNotes[0];
+
     $scope.allNotes[$scope.currentIndex].isSelected = false;
     $scope.allNotes[$scope.currentIndex + 1].isSelected = false;
     $scope.allNotes[$scope.currentIndex].sync = false;

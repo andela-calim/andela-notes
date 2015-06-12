@@ -27,12 +27,7 @@ var app = angular.module('andeNote', [])
     return {
       restrict: 'E',
       templateUrl: 'templates/m-note-area.html',
-      replace: true,
-      link: function (scope, element) {
-        // $('.m-note-card').on('click', function(){
-        //   console.log('hi');
-        // });
-      }
+      replace: true
     }
   })
 
