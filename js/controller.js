@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('NoteCtrl', ['$scope', function($scope) {
+app.controller('NoteCtrl', ['$scope', '$timeout', function($scope, $timeout) {
 
   var screenWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
@@ -129,9 +129,12 @@ app.controller('NoteCtrl', ['$scope', function($scope) {
   $scope.test = function() {
     console.log('Yo');
   }
-  $scope.toggleNoteView = function () {
+  $scope.toggleNoteView = function ($index) {
     console.log("Toggle called");
     $scope.noteView = !$scope.noteView;
-    $scope.$apply();
+    $timeout(function() {
+      $scope.$apply();
+    }, 10);
+    $scope.editNote = $scope.allNotes[$index];
   };
 }]);

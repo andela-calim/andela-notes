@@ -13,7 +13,7 @@
 </div>
 
   <div ng-hide="noteView" class="m-note-area m-contain note-positioner">
-    <button class="as-text jumbotron m-note-card" ng-repeat="note in allNotes track by $index">
+    <button class="as-text jumbotron m-note-card" ng-repeat="note in allNotes track by $index" ng-click="toggleNoteView($index)">
         <span class="display-block fs-body-1 tc-black-2 m-date">{{ note.lastEdited | date }}</span>
         <h3 class="m-title">{{ note.title }}</h3>
         <p>{{ note.excerpt }}</p>
