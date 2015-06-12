@@ -12,7 +12,6 @@
 }
 
 .notes-list ul li {
-  min-width: 400px;
   cursor: pointer;
   -webkit-border-right: 2px solid #f4f4f4;
   -webkit-transition: background-color .25s !important;
