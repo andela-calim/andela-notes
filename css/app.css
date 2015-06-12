@@ -61,4 +61,11 @@ ul {
   visibility: hidden;
 }
 
-
+@media screen and (min-width: 1600px) {
+  .sidebar {
+    width: 15%;
+  }
+  .notes-area {
+    width: 85% !important;
+  }
+}

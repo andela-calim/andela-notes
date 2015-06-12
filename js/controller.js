@@ -91,7 +91,7 @@ app.controller('NoteCtrl', ['$scope', '$timeout', function($scope, $timeout) {
   $scope.currentIndex = null;
 
   $scope.selectNote = function($index) {
-    if($scope.currentIndex !== null) {
+    if ($scope.currentIndex !== null) {
       $scope.allNotes[$scope.currentIndex].isSelected = false;
       $scope.allNotes[$scope.currentIndex].sync = false;
     }
@@ -157,6 +157,10 @@ app.controller('NoteCtrl', ['$scope', '$timeout', function($scope, $timeout) {
   ********************/
   $scope.addBgColor = function() {
     $scope.changeBg = !$scope.changeBg;
+    if ($scope.changeBg) {
+      alertify.success('Default background theme activated. Upgrade to Premium to use your own background');
+      return false;
+    }
   };
 
   $scope.noteView = true;

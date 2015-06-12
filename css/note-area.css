@@ -60,15 +60,16 @@
   min-height: 407px;
 }
 
-.editor .toolbox {
+div.toolbox {
   position: absolute;
+  z-index: 10000;
   width: 30px;
   margin-top: 50px;
   right: 0;
   margin-right: 30px;
 }
 
-.toolbox div i {
+div.toolbox div i {
   line-height: 30px;
   text-align: center;
   font-size: 20px;
@@ -152,7 +153,7 @@ li.wrapper {
   -webkit-transition: none;
   transition: none;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   line-height: 30px;
   border: 1px solid #fff;
 }
