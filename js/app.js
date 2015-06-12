@@ -3,7 +3,36 @@
 
 var app = angular.module('andeNote', [])
 
+  .directive('mobileHeader', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'templates/mobile-header.html',
+      replace: true,
+      link: function (scope, element) {
+        var sidePane = new $.slidebars();
+        var toggle = false;
+        $('.view-notes').on('click', function(){
+          $('.f-tools').trigger('click');
+        });
+        $('.nav-call').on('click', function() {
+          toggle = !toggle;
+          if (toggle !== false) {
+            sidePane.slidebars.open('left');
+          }
+        });
+      }
+    };
+  })
+  .directive('mNoteArea', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'templates/m-note-area.html',
+      replace: true
+    }
+  })
+
 .directive('header', function() {
+
     return {
       restrict: 'E',
       templateUrl: 'templates/header.html',
@@ -30,7 +59,7 @@ var app = angular.module('andeNote', [])
           }
         };
       }]
-    }
+    };
   })
   .directive('noteArea', function() {
     return {
