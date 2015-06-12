@@ -47,8 +47,8 @@ app.controller('NoteCtrl', ['$scope', function($scope) {
     if($scope.currentIndex !== null) {
       $scope.allNotes[$scope.currentIndex].isSelected = false;
     }
-    $scope.allNotes[$index].isSelected = true;
     $scope.currentIndex = $index;
+    $scope.allNotes[$scope.currentIndex].isSelected = true;
     $scope.editNote = $scope.allNotes[$index];
   };
 
@@ -60,7 +60,10 @@ app.controller('NoteCtrl', ['$scope', function($scope) {
     };
     $scope.allNotes.unshift(note);
     $scope.editNote = $scope.allNotes[0];
-    $scope.allNotes[0].isSelected = true;
+    $scope.allNotes[$scope.currentIndex].isSelected = false;
+    $scope.allNotes[$scope.currentIndex + 1].isSelected = false;
+    $scope.currentIndex = 0;
+    $scope.allNotes[$scope.currentIndex].isSelected = true;
   };
 
   $scope.toolbox = [{
